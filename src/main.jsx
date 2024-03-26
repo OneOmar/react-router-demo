@@ -3,9 +3,10 @@ import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { HomePage } from './components/HomePage.jsx'
 import { Posts } from './components/Posts.jsx'
-import { Post } from './components/Post.jsx'
+// import { Post } from './components/Post.jsx'
 import { NotFoundPage } from './components/NotFoundPage.jsx'
 import './index.css'
+import { PostRoute } from './components/PostRoute.jsx'
 
 // Define the routes
 const router = createBrowserRouter([
@@ -19,7 +20,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: ':id',
-        element: <Post />
+        element: <PostRoute />
       }
     ]
   },
